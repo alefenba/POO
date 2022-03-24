@@ -1,13 +1,20 @@
+'''
+ O self é sempre usado para referenciar instancia...
+Através do self eu consigo saber de qual instacia aquele método/atributo está sendo chamado.
+'''
 
 class Pessoas:
-    def __init__(self, nome, idade, cpf):
-        print(f'{nome} | {idade} | {cpf}')
+    def __init__(self, nome,):
+        self.nome = nome
         
+    def retorna_nome(self):
+        return self.nome
 
     def logar_sistema(self):
-        print('Estou logando no sistema!')
+        print(f'{self.retorna_nome()} Está Logando no sistema')
 
-#Sempre que criado uma nova instancia o método construtor será executado
-pessoa_1 = Pessoas('Alefe Gomes', 24, '12345678978')
+
+pessoa_1 = Pessoas('Alefe Gomes')
+pessoa_1.logar_sistema()
 
 
