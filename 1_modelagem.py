@@ -1,11 +1,15 @@
 '''
- O self é sempre usado para referenciar instancia...
-Através do self eu consigo saber de qual instacia aquele método/atributo está sendo chamado.
+Atributos de classes São propriedades semelhantes que os objetos de uma classe possuem.
 '''
 
 class Pessoas:
-    def __init__(self, nome,):
+    possui_olho = True
+    possui_boca = True
+    raca = 'Ser Humano'
+
+    def __init__(self, nome, idade):
         self.nome = nome
+        self.idade = idade 
         
     def retorna_nome(self):
         return self.nome
@@ -13,8 +17,9 @@ class Pessoas:
     def logar_sistema(self):
         print(f'{self.retorna_nome()} Está Logando no sistema')
 
+p1 = Pessoas('Alefe Gomes', 24)
+p2 = Pessoas('Caio sampaio', 21)
 
-pessoa_1 = Pessoas('Alefe Gomes')
-pessoa_1.logar_sistema()
+print(p1.possui_boca)
 
 
