@@ -17,9 +17,12 @@ class Pessoas:
     def logar_sistema(self):
         print(f'{self.retorna_nome()} Está Logando no sistema')
 
-p1 = Pessoas('Alefe Gomes', 24)
-p2 = Pessoas('Caio sampaio', 21)
+    @classmethod
+    def andar(cls, velocidade):
+        print(f'Estou andando na velocidade {velocidade} m/s')
 
-print(p1.possui_boca)
+#p1 = Pessoas('Alefe Gomes', 24)
+#p2 = Pessoas('Caio sampaio', 21)
 
+Pessoas.andar(10)
 
