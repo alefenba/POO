@@ -1,5 +1,5 @@
 '''
-Atributos de classes São propriedades semelhantes que os objetos de uma classe possuem.
+CLS é um parametro a qual recebe o estado da classe 
 '''
 
 class Pessoas:
@@ -18,11 +18,14 @@ class Pessoas:
         print(f'{self.retorna_nome()} Está Logando no sistema')
 
     @classmethod
-    def andar(cls, velocidade):
-        print(f'Estou andando na velocidade {velocidade} m/s')
+    def andar(cls):
+        cls.possui_boca = False
+        return None
 
 #p1 = Pessoas('Alefe Gomes', 24)
 #p2 = Pessoas('Caio sampaio', 21)
 
-Pessoas.andar(10)
+print(Pessoas.possui_boca)
+Pessoas.andar()
+print (Pessoas.possui_boca)
 
